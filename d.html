@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html class="d">
+<head>
+  <title>Инструкция</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="d">
+  <section class="section-d">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Структура
+        </div>
+    </div>
+    <div class="section-d-text">
+      В каждом элементе описано его местоположение в верстке. Для того чтобы найти нужный элемент, достаточно найти в коде ссылку на него через "поиск в файле". Основной файл index.html находящийся в корне проекта.
+      <ul>
+        <li><a class="d" href="#about">About</a></li>
+        <li><a class="d" href="#news">News</a></li>
+        <li><a class="d" href="#product">Product</a></li>
+        <li><a class="d" href="#directions">Directions</a></li>
+        <li><a class="d" href="#team">Red Grey block</a></li>
+        <li><a class="d" href="#teamQuads">Team</a></li>
+        <li><a class="d" href="#contacts">Contacts</a></li>
+        <li><a class="d" href="#feedback">Форма обратной связи</a></li>
+        <li><a class="d" href="#articles">Заголовки</a></li>
+        <li><a class="d" href="#images">Изображения</a></li>
+      </ul>
+    </div>
+  </section>
+  <section class="section-d" id="about">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            About
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Заголовок</h3>
+      Для корректного отображения заголовка, необходимо чтобы его размер не превышал 120 символов.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [ABOUT_HEADER] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Текст</h3>
+      Для корректного отображение текста под тайтлом, необходимо чтобы его размер был меньше 500 символов, включая пробелы.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [ABOUT_DESCRIPTION] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-d" id="news">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            News
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Новости</h3>
+      В слайдере отображаются последние 10 новостей с твиттера.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [NEWS_BLOCK] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Заголовок</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [NEWS_TITLE] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Твиттер аккаунт</h3>
+      Для смены активного твиттер аккаунта необходимо поменять его имя в файле
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span>Файл js/main.js</span>
+        </div>
+      </div>
+      <div class="place">
+        Строка:
+        <div class="place__tag">
+          <span>var tweeterLink = <b>'bcs'</b>;</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <section class="section-d" id="product">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Product
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Заголовок</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [PRODUCT_TITLE] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Слайд</h3>
+      Для корректного добавления слайда, необходимо добавить код расположенный ниже в разметку, предварительно заменив заголовок и текст внутри. Кнопки навигации появятся если слайдов будет больше трех в десктопной версии.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [PRODUCT_SLIDER] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+      <div class="place">
+        Пример слайда
+        <div class="place__tag">
+          <textarea class="d" readonly="true" style="width: 100%; height: 430px; resize: none;">
+          <div class="swiper-slide product-slide">
+              <div class="product-slide__image">
+                  <div style="background: url('img/test-image.svg') no-repeat center">
+                  </div>
+              </div>
+              <div class="product-slide__title__wrapper">
+                  <div class="product-slide__title">
+                      Article sample
+                  </div>
+              </div>
+              <div class="product-slide__text__wrapper">
+                  <div class="product-slide__text">
+                      Text sample
+                  </div>
+              </div>
+          </div>
+          </textarea>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section-d" id="directions">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Directions
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Слайд</h3>
+      Для корректного добавления слайда, необходимо добавить код расположенный ниже в разметку, предварительно заменив заголовок и текст внутри.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [DIRECTIONS_SLIDER] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+      <div class="place">
+        Пример слайда
+        <div class="place__tag">
+          <textarea class="d" readonly="true" style="width: 100%; height: 480px; resize: none;">
+          <div class="swiper-slide direction-slide">
+            <div class="swiper-slide__container">
+                <div class="direction-slide__image">
+                    <div style="background: url('img/test-image.svg') no-repeat center">
+                    </div>
+                </div>
+                <div class="direction-slide__title__wrapper">
+                    <div class="direction-slide__title">
+                        Article sample
+                    </div>
+                </div>
+                <div class="direction-slide__text__wrapper">
+                    <div class="direction-slide__text">
+                        Text sample
+                    </div>
+                </div>
+            </div>
+          </div>
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-d" id="team">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Red Grey block
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Красный блок</h3>
+      Для корректного отображения текста, необходимо чтобы его размер не превышал 180 символов с пробелами. Желательно чтобы список был не больше, чем 6 пунктов.
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [TEAM_RED_BLOCK] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Серый блок</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [TEAM_BLACK_BLOCK] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-d" id="teamQuads">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Team
+        </div>
+    </div>
+    <div class="section-d-text">
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [TEAM_BLOCK] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Изображения</h3>
+        Подписи к изображениям меняются как в примере ниже. Если необходимо заменить изображение пользователя, то его необходимо добавить по пути указанном в местонахождении и прописать соответствующий путь до него.
+      <div class="place">
+        Местонахождение изображений:
+        <div class="place__tag">
+          <span><b>/img/users/...</b></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <div class="place">
+        Пример квадрата с юзером
+        <div class="place__tag">
+          <textarea class="d" readonly="true" style="width: 100%; height: 225px; resize: none;">
+            <div class="section-team-quad-el not-animated-opacity">
+                <div class="section-team-quad-el__info">
+                    <span>
+                        Блокчейн<br>разработчик
+                    </span>
+                </div>
+                <img class="section-team-quad-el__image" src="img/users/user1.png" >
+            </div>
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-d" id="contacts">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Contacts
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Заголовок</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [CONTACTS_TITLE] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Почтовый адрес</h3>
+      При смене почтового адреса, необходимо заменить адреса в ссылке  
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [CONTACTS_EMAIL] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <div class="place">
+        Содержимое блока со ссылкой
+        <div class="place__tag">
+          <textarea class="d" readonly="true" style="width: 100%; height: 50px; resize: none;">
+            <a class="no-border" href="mailto:hello@bcs.world">hello@bcs.world</a>
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-d" id="feedback">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Форма обратной связи
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Заголовок</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [FORM_TITLE] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Текст</h3>
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [FORM_TEXT] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Сообщение</h3>
+      Сообщение выводится при успешной отправке формы
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [FORM_SUCCESS] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Адрес формы</h3>
+      Почтовый адрес, на который отправляются сообщения из формыю. Необходимо поменять адрес в <b>data-email</b> на необходимый.<br>
+      bcs.world.sender@gmail.com blockchain2018
+      <div class="place">
+        Местонахождение:
+        <div class="place__tag">
+          <span><</span><span>!</span><span>--</span> [FORM_EMAIL] <span>--</span><span>!</span><span>></span>
+        </div>
+      </div>      
+    </div>
+    <div class="section-d-text">
+      <div class="place">
+        <div class="place__tag">
+          <span><</span><span>form</span> method="POST" class="gform" <b>data-email="text@mail.ru"</b> action="https://script.google.com/macros/s/AKfycbwf3niodlnqNosqCsQSmSpP7VA-1SIAzapVEndkbA/exec"<span>></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section-d" id="articles">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Заголовки
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Стилизация</h3>
+      Для того, чтобы добавить слову или элементу серый бордер под ним, необходимо слово заключить с следующую конструкцию: 
+      <div class="place">
+
+        Пример:
+        <div class="place__tag">
+          <span><</span><span>span</span><span></span> class="span-underline">2b or not 2b <span><</span><span>/</span><span>span></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section-d" id="images">
+    <div class="section-d-title">
+        <div class="section-d-title__text">
+            Изображения
+        </div>
+    </div>
+    <div class="section-d-text">
+      <h3>Местоположение</h3>
+      Все изображения хранятся в каталоге <b>img/</b>
+      Для того чтобы добавить новую графику, необходимо поместить изображения в данный каталог, и указывать соотвествующий путь до нее в разметке
+      <div class="place">
+        Пример:
+        <div class="place__tag">
+          <span><</span><span>img</span><span></span> <b>src="img/sample.png"</b> alt="image" <span></span><span>/</span><span>></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</body>
+</html>
