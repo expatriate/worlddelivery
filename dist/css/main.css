@@ -610,19 +610,19 @@ body, html {
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
     .whyus__item:nth-child(1) {
-      background-color: #082863; }
+      background: linear-gradient(135deg, #668c8a 10%, #02225c 100%); }
       .whyus__item:nth-child(1) .whyus__title, .whyus__item:nth-child(1) .whyus__text {
         color: #ffffff; }
       .whyus__item:nth-child(1) .whyus__icon {
         fill: #c0d8f7; }
     .whyus__item:nth-child(2) {
-      background-color: #7fb2da; }
+      background: linear-gradient(135deg, #466cb1 10%, #6fa8ae 100%); }
       .whyus__item:nth-child(2) .whyus__title, .whyus__item:nth-child(2) .whyus__text {
         color: #ffffff; }
       .whyus__item:nth-child(2) .whyus__icon {
         fill: #c0d8f7; }
     .whyus__item:nth-child(3) {
-      background-color: #ffffff; }
+      background: linear-gradient(135deg, #bceae4 10%, #36e2da 100%); }
       .whyus__item:nth-child(3) .whyus__title, .whyus__item:nth-child(3) .whyus__text {
         color: #02225c; }
       .whyus__item:nth-child(3) .whyus__icon {
@@ -1441,9 +1441,22 @@ body, html {
   text-decoration: none; }
 
 .footer-contacts__item {
-  margin-bottom: 22px; }
+  margin-bottom: 22px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   .footer-contacts__item svg {
-    margin-right: 8px;
+    margin-right: 16px;
     width: 32px;
     height: 32px;
     fill: #ffffff; }
@@ -1612,7 +1625,8 @@ input {
   background: transparent;
   font-family: MuseoSansNormal;
   -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  box-sizing: border-box; }
   input::-webkit-input-placeholder {
     color: #02225c;
     font-size: 18px;
@@ -1650,6 +1664,57 @@ input {
       color: #ffffff; }
     input:focus::placeholder {
       color: #ffffff; }
+
+.white-popup-block {
+  background: #ffffff;
+  padding: 80px 100px;
+  text-align: left;
+  max-width: 650px;
+  margin: 40px auto;
+  position: relative;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.6); }
+
+.popup__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+
+.popup__content {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 36px; }
+  .popup__content input, .popup__content button {
+    width: 100%; }
+
+.popup__header {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1; }
+
+.popup__title {
+  font-size: 22px;
+  font-family: MuseoSansBold;
+  line-height: 1.1;
+  letter-spacing: 1px;
+  margin-bottom: 52px;
+  color: #0a255e; }
+
+.popup__text {
+  font-size: 15px;
+  font-family: MuseoSansThin;
+  color: #0a255e; }
+
+.hidden {
+  display: none; }
 
 /* 
 #header {

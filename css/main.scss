@@ -221,7 +221,7 @@ body, html {
 
 
     &:nth-child(1) {
-      background-color: #082863;
+      background: linear-gradient( 135deg, #668c8a 10%, #02225c 100%);
       .whyus__title, .whyus__text {
         color: #ffffff;
       }
@@ -230,7 +230,7 @@ body, html {
       }
     }
     &:nth-child(2) {
-      background-color: #7fb2da;
+      background: linear-gradient( 135deg, #466cb1 10%, #6fa8ae 100%);
       .whyus__title, .whyus__text {
         color: #ffffff;
       }
@@ -239,7 +239,7 @@ body, html {
       }
     }
     &:nth-child(3) {
-      background-color: #ffffff;
+      background: linear-gradient( 135deg, #bceae4 10%, #36e2da 100%);
       .whyus__title, .whyus__text {
         color: #02225c;
       }
@@ -960,8 +960,11 @@ body, html {
 
   &__item {
     margin-bottom: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     svg {
-      margin-right: 8px;
+      margin-right: 16px;
       width: 32px;
       height: 32px;
       fill: #ffffff;
@@ -1123,6 +1126,7 @@ input {
   background: transparent;
   font-family: MuseoSansNormal;
   transition: all 0.4s ease;
+  box-sizing: border-box;
 
   &::placeholder {
     color: #02225c;
@@ -1143,6 +1147,56 @@ input {
   }
 }
 
+
+.white-popup-block {
+  background: #ffffff;
+  padding: 80px 100px;
+  text-align: left;
+  max-width: 650px;
+  margin: 40px auto;
+  position: relative;
+  box-shadow: 0px 0px 60px rgba(0,0,0,0.6);
+}
+
+.popup {
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__content {
+    flex: 1;
+    padding-right: 36px;
+
+    input, button {
+      width: 100%;
+    }
+  }
+
+  &__header {
+    flex: 1
+  }
+
+  &__title {
+    font-size: 22px;
+    font-family: MuseoSansBold;
+    line-height: 1.1;
+    letter-spacing: 1px;
+    margin-bottom: 52px;
+    color: #0a255e;
+  }
+
+  &__text {
+    font-size: 15px;
+    font-family: MuseoSansThin;
+    color: #0a255e;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
 /* 
 #header {
   position: absolute;

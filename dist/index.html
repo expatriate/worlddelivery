@@ -24,14 +24,14 @@
               <span>Заказать звонок</span>
             </div>
             <nav class="navigation">
-              <a href="#" class="active">Акции</a>
-              <a href="#">Преимущества</a>
-              <a href="#">Услуги</a>
-              <a href="#">О нас</a>
-              <a href="#">Почему мы</a>
-              <a href="#">Схема работы</a>
-              <a href="#">Отзывы</a>
-              <a href="#">Контакты</a>
+              <a href="#promo" class="active">Акции</a>
+              <a href="#benefits">Преимущества</a>
+              <a href="#services">Услуги</a>
+              <a href="#about">О нас</a>
+              <a href="#why">Почему мы</a>
+              <a href="#scheme">Схема работы</a>
+              <a href="#reviews">Отзывы</a>
+              <a href="#contacts">Контакты</a>
             </nav>
           </div>
         </div>
@@ -52,7 +52,7 @@
           <form class="top-form top-form__left">
             <input type="text" name="name" placeholder="Имя">
             <input type="phone" name="phone" placeholder="Телефон">
-            <button class="submit">
+            <button class="submit send">
               <span class="submit__shadow">
                 <span class="submit__content">
                   <span>
@@ -75,7 +75,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="promo">
       <div class="container__content">
         <h2 class="title title__blue">
           Ваш личный авиакурьер - это&nbsp;супер&#8209;человек, который:
@@ -140,7 +140,7 @@
       </div>
     </section>
 
-    <section class="container container__map">
+    <section class="container container__map" id="benefits">
       <div class="container__content">
         <h2 class="title title__white">
           Почему личный авиакурьер надежнее крупных компаний авиаперевозок?
@@ -301,7 +301,7 @@
           </div>
         </div>
         <div class="free-consult-container">
-          <button class="submit">
+          <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
                 <span>
@@ -314,7 +314,7 @@
       </div>
     </section>
 
-    <section class="container container__mid-form">
+    <section class="container container__mid-form" id="services">
       <div class="container__content">
         <h2 class="title title__blue">
           Когда услуги авиакурьера особенно&nbsp;нужны?
@@ -374,7 +374,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Деликатесы
             </div>
@@ -383,7 +383,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Перевозка животных
             </div>
@@ -392,7 +392,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Зарубежный шоппинг
             </div>
@@ -401,7 +401,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Товары <br>Duty-Free
             </div>
@@ -410,7 +410,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Сопровождение <br>пожилых людей
             </div>
@@ -419,7 +419,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item hidden">
             <div class="whenneeds__title">
               Любая другая <br>услуга
             </div>
@@ -456,7 +456,7 @@
           </div>
           
           <div class="mid-form__btn-container">
-            <button class="submit">
+            <button class="submit send">
               <span class="submit__shadow">
                 <span class="submit__content">
                   <span>
@@ -474,7 +474,7 @@
       </div>
     </section>
 
-    <section class="container container__darkblue">
+    <section class="container container__darkblue" id="about">
       <div class="container__content">
         <div class="info-block">
           <div class="info-block__left">
@@ -554,7 +554,7 @@
           </div>
         </div>
 
-        <h2 class="title title__white">
+        <h2 class="title title__white" id="why">
           Почему клиенты выбирают нас:
         </h2>
 
@@ -589,7 +589,7 @@
         </div>
 
         <div class="mid-form__btn-container">
-          <button class="submit">
+          <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
                 <span>
@@ -603,7 +603,7 @@
       </div>
     </section>
 
-    <section class="container">
+    <section class="container" id="scheme">
       <div class="container__content">
         <div class="scheme">
           <h2 class="title title__blue">
@@ -669,7 +669,7 @@
           </div>
         </div>
         <div class="free-consult-container">
-          <button class="submit">
+          <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
                 <span>
@@ -681,7 +681,7 @@
           </button>
         </div>
 
-        <div class="comments">
+        <div class="comments" id="reviews">
           <h2 class="title title__blue">
             Что говорят клиенты:
           </h2>
@@ -751,7 +751,7 @@
       </div>
     </section>
 
-    <section class="container container__footer">
+    <section class="container container__footer" id="contacts">
       <div class="container__content container__content--nopad">
         <div class="footer">
           <div class="footer__left">
@@ -762,7 +762,7 @@
               </div>
               <div class="footer-contacts__item">
                 <svg role="img">
-                  <use xlink:href="map.svg#email"/>
+                  <use xlink:href="map.svg#mail"/>
                 </svg>
                 <a href="mailto:info@мировая-доставка.рф">info@мировая-доставка.рф</a>
               </div>
@@ -796,7 +796,7 @@
           <form>
             <input type="text" name="name" placeholder="Имя">
             <input type="phone" name="phone" placeholder="Телефон">
-            <button class="submit">
+            <button class="submit send">
               <span class="submit__shadow">
                 <span class="submit__content">
                   <span>
@@ -811,6 +811,48 @@
       </div>
     </section>
 
+
+    <div id="form" class="white-popup-block popup mfp-hide">
+      <div class="popup__container">
+        <div class="popup__content">
+          <form action="" method="post" id="submit__popup" novalidate="novalidate">
+            <input type="text" name="name" placeholder="Имя">
+            <input type="phone" name="phone" placeholder="Телефон">
+            <button class="submit">
+              <span class="submit__shadow">
+                <span class="submit__content">
+                  <span>
+                    Отправить
+                  </span>
+                  <img src="img/sent-mail.svg" alt="Оставить заявку">
+                </span>
+              </span>
+            </button>
+          </form>
+        </div>
+        <div class="popup__header">
+          <div class="popup__title">
+            Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время
+          </div>
+          <div class="popup__text">
+            100% гарантия<br>конфиденциальности
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="success" class="white-popup-block popup mfp-hide">
+      <div class="popup__container">
+        <div class="popup__header">
+          <div class="popup__title">
+            Спасибо! 
+          </div>
+          <div class="popup__text">
+            Наш менеджер свяжется с вами в&nbsp;ближайшее время
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
