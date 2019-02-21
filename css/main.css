@@ -1611,6 +1611,9 @@ body, html {
 
 .free-consult-container {
   text-align: center; }
+  @media screen and (max-width: 720px) {
+    .free-consult-container {
+      margin: 0px 24px; } }
 
 .half-content {
   display: -webkit-box;
@@ -2120,6 +2123,9 @@ input {
   margin: 40px auto;
   position: relative;
   box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.6); }
+  @media screen and (max-width: 720px) {
+    .white-popup-block {
+      padding: 40px 30px; } }
 
 .popup__container {
   display: -webkit-box;
@@ -2131,6 +2137,13 @@ input {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row; }
+  @media screen and (max-width: 720px) {
+    .popup__container {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
 
 .popup__content {
   -webkit-box-flex: 1;
@@ -2138,6 +2151,10 @@ input {
       -ms-flex: 1;
           flex: 1;
   padding-right: 36px; }
+  @media screen and (max-width: 720px) {
+    .popup__content {
+      padding-right: 0px;
+      padding-bottom: 32px; } }
   .popup__content input, .popup__content button {
     width: 100%; }
 
@@ -2154,11 +2171,17 @@ input {
   letter-spacing: 1px;
   margin-bottom: 52px;
   color: #0a255e; }
+  @media screen and (max-width: 720px) {
+    .popup__title {
+      margin-bottom: 32px; } }
 
 .popup__text {
   font-size: 15px;
   font-family: MuseoSansThin;
   color: #0a255e; }
+  @media screen and (max-width: 720px) {
+    .popup__text {
+      font-size: 14px; } }
 
 .hidden {
   display: none; }
