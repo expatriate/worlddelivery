@@ -11,11 +11,9 @@ $(document).ready(function() {
       clickable: true,
     },
     breakpoints: {
-      1200: {
-        spaceBetween: 40
-      },
-      1400: {
-        spaceBetween: 40
+      1250: {
+        spaceBetween: 0,
+        slidesPerView: 2,
       },
       720: {
         slidesPerView: 1,
@@ -39,9 +37,9 @@ $(document).ready(function() {
         clickable: true,
       },
       breakpoints: {
-        1200: {
-          spaceBetween: 40,
-          slidesPerView: 2,
+        1250: {
+          spaceBetween: 0,
+          slidesPerView: 3,
         },
         720: {
           slidesPerView: 1,
@@ -145,6 +143,12 @@ $(document).ready(function() {
 
 
 function loadAnimation() {
+
+    setTimeout(function() {
+      $('.right-pad').find('canvas').animate({opacity: 1}, 400)
+    },500)
+
+
     // Blocks to animate
     var simpleFade = $('.js-animate-fade');
     var animateFromTop = $('.js-animate-from-top');
