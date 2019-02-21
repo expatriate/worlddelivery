@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/vendor.main.css">
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/vendor.main.css">
+    <script src="https://cdn.rawgit.com/GoodBoyDigital/pixi.js/v1.6.1/bin/pixi.js"></script>
     <script src="js/vendor.min.js"></script>
 
     <title>Мировая доставка</title>
@@ -39,49 +40,52 @@
     </header>
 
     <section class="container">
-      <div class="container__content">
+      <div class="container__content container__main">
         <div class="left-pad">
-          <h1 class="main-title">
+          <h1 class="main-title js-animate-from-bot">
             Срочная авиадоставка и&nbsp;выполнение поручений по&nbsp;всему миру через личного&nbsp;авиакурьера
           </h1>
-          <h3 class="semi-title">
+          <h3 class="semi-title js-animate-from-bot">
             Так быстро и надежно, как если бы вы полетели сами!
           </h3>
-        </div>
-        <div class="top-form-container">
-          <form class="top-form top-form__left">
-            <input type="text" name="name" placeholder="Имя">
-            <input type="phone" name="phone" placeholder="Телефон">
-            <button class="submit send">
-              <span class="submit__shadow">
-                <span class="submit__content">
-                  <span>
-                    Оставить заявку
+          <div class="top-form-container js-animate-from-bot-slow">
+            <form class="top-form top-form__left">
+              <input type="text" name="name" placeholder="Имя">
+              <input type="phone" name="phone" placeholder="Телефон">
+              <button class="submit send">
+                <span class="submit__shadow">
+                  <span class="submit__content">
+                    <span>
+                      Оставить заявку
+                    </span>
+                    <img src="img/sent-mail.svg" alt="Оставить заявку">
                   </span>
-                  <img src="img/sent-mail.svg" alt="Оставить заявку">
                 </span>
+              </button>
+            </form>
+            <div class="top-form__right">
+              <span class="top-form__normal">
+                Скидка 20% новым&nbsp;клиентам на&nbsp;услуги авиакурьера до&nbsp;конца февраля
               </span>
-            </button>
-          </form>
-          <div class="top-form__right">
-            <span class="top-form__normal">
-              Скидка 20% новым&nbsp;клиентам на&nbsp;услуги авиакурьера до&nbsp;конца февраля
-            </span>
-            <span class="top-form__small">
-              100% гарантия конфиденциальности
-            </span>
+              <span class="top-form__small">
+                100% гарантия конфиденциальности
+              </span>
+            </div>
           </div>
+        </div>
+        <div class="right-pad">
+          <!-- <img src="img/plane.jpg"> -->
         </div>
       </div>
     </section>
 
     <section class="container" id="promo">
       <div class="container__content">
-        <h2 class="title title__blue">
+        <h2 class="title title__blue js-animate-from-bot">
           Ваш личный авиакурьер - это&nbsp;супер&#8209;человек, который:
         </h2>
         <div class="blocks">
-          <div class="blocks__item">
+          <div class="blocks__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#block1"/>
             </svg>
@@ -92,7 +96,7 @@
               (как в России, так и в любой другой стране) в удобном отправителю месте в назначенное время и&nbsp;заберет посылку/примет поручение.
             </div>
           </div>
-          <div class="blocks__item">
+          <div class="blocks__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#block2"/>
             </svg>
@@ -103,7 +107,7 @@
               доставлять заказ самым ближайшим рейсом (никаких посредников и никакого ожидания в сортировочном пункте - сразу в аэропорт!)
             </div>
           </div>
-          <div class="blocks__item">
+          <div class="blocks__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#block3"/>
             </svg>
@@ -114,7 +118,7 @@
               получателю из рук в руки, выполнит поручение. Мгновенно отчитается о результатах.
             </div>
           </div>
-          <div class="blocks__item">
+          <div class="blocks__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#block4"/>
             </svg>
@@ -125,7 +129,7 @@
               за груз/поручение/заказ. Всё время будет на связи по телефону напрямую.
             </div>
           </div>
-          <div class="blocks__item">
+          <div class="blocks__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#block5"/>
             </svg>
@@ -142,12 +146,12 @@
 
     <section class="container container__map" id="benefits">
       <div class="container__content">
-        <h2 class="title title__white">
+        <h2 class="title title__white js-animate-from-bot">
           Почему личный авиакурьер надежнее крупных компаний авиаперевозок?
         </h2>
         <div class="half">
           <div class="half__item">
-            <div class="half__title">
+            <div class="half__title js-animate-from-bot">
               <div class="half__img">
                 <img src="img/avia-courier.png">
               </div>
@@ -156,7 +160,7 @@
               </span>
             </div>
             <div class="half-content half-content__left">
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--plus">
                   ＋
                 </div>
@@ -169,7 +173,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--plus">
                   ＋
                 </div>
@@ -182,7 +186,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--plus">
                   ＋
                 </div>
@@ -195,7 +199,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--plus">
                   ＋
                 </div>
@@ -211,7 +215,7 @@
             </div>
           </div>
           <div class="half__item">
-            <div class="half__title">
+            <div class="half__title js-animate-from-bot">
               <div class="half__img">
               </div>
               <span class="title title__blue title__full title__pad">
@@ -219,7 +223,7 @@
               </span>
             </div>
             <div class="half-content half-content__right">
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--minus">
                   －
                 </div>
@@ -232,7 +236,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--minus">
                   －
                 </div>
@@ -245,7 +249,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--minus">
                   －
                 </div>
@@ -258,7 +262,7 @@
                   </div>
                 </div>
               </div>
-              <div class="half-content__item">
+              <div class="half-content__item js-animate-from-bot-slow">
                 <div class="half-content__button half-content__button--minus">
                   －
                 </div>
@@ -279,11 +283,11 @@
 
     <section class="container">
       <div class="container__content">
-        <h2 class="title title__blue title__center">
+        <h2 class="title title__blue title__center js-animate-from-bot">
           Через авиакурьера вы можете:
         </h2>
         <div class="ucan">
-          <div class="ucan__item">
+          <div class="ucan__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#ucan1"/>
             </svg>
@@ -291,7 +295,7 @@
               отправить надежного человека с посылкой/ поручением из России в любую точку мира
             </div>
           </div>
-          <div class="ucan__item">
+          <div class="ucan__item js-animate-from-bot-slow">
             <svg role="img">
               <use xlink:href="map.svg#ucan2"/>
             </svg>
@@ -300,7 +304,7 @@
             </div>
           </div>
         </div>
-        <div class="free-consult-container">
+        <div class="free-consult-container js-animate-from-bot-slow">
           <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
@@ -316,12 +320,12 @@
 
     <section class="container container__mid-form" id="services">
       <div class="container__content">
-        <h2 class="title title__blue">
+        <h2 class="title title__blue js-animate-from-bot">
           Когда услуги авиакурьера особенно&nbsp;нужны?
         </h2>
 
         <div class="whenneeds">
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Экспресс-доставка документов
             </div>
@@ -329,7 +333,7 @@
               Срочно. Конфиденциально.<br>Из рук в руки.
             </div>
           </div>
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Срочная доставка посылок
             </div>
@@ -337,7 +341,7 @@
               Посылки, малые и крупные разборные <br>грузы с гарантией сохранности.
             </div>
           </div>
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Образцы товаров для бизнеса
             </div>
@@ -346,7 +350,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
              Доставка <br>забытых <br>вещей
 
@@ -356,7 +360,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Доставка нужных <br>лекарств
             </div>
@@ -365,7 +369,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item">
+          <div class="whenneeds__item js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Выполнение <br>поручений
             </div>
@@ -374,7 +378,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Деликатесы
             </div>
@@ -383,7 +387,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Перевозка животных
             </div>
@@ -392,7 +396,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Зарубежный шоппинг
             </div>
@@ -401,7 +405,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Товары <br>Duty-Free
             </div>
@@ -410,7 +414,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Сопровождение <br>пожилых людей
             </div>
@@ -419,7 +423,7 @@
             </div>
           </div>
 
-          <div class="whenneeds__item hidden">
+          <div class="whenneeds__item hidden js-animate-from-bot-slow">
             <div class="whenneeds__title">
               Любая другая <br>услуга
             </div>
@@ -430,16 +434,16 @@
 
         </div>
 
-        <div class="showmore__container">
+        <div class="showmore__container js-animate-from-bot-slow">
           <button class="showmore">
             Посмотреть все услуги
           </button>
         </div>
 
-        <h2 class="title title__blue title__center">
+        <h2 class="title title__blue title__center js-animate-from-bot">
           Узнайте стоимость услуг авиакурьера
         </h2>
-        <form class="mid-form">
+        <form class="mid-form js-animate-from-bot-slow">
           <div class="row">
             <input type="text" name="name" placeholder="Откуда вылетаем?">
             <input type="phone" name="phone" placeholder="Куда летим?">
@@ -478,12 +482,12 @@
       <div class="container__content">
         <div class="info-block">
           <div class="info-block__left">
-            <h2 class="left-title">
+            <h2 class="left-title js-animate-from-bot">
               О нас в&nbsp;цифрах
             </h2>
           </div>
           <div class="info-block__container">
-            <div class="info-block__item">
+            <div class="info-block__item js-animate-from-bot-slow">
               <div class="info-block__row">
                 <div class="info-block__count">
                   8
@@ -500,7 +504,7 @@
                 </div>
               </div>
             </div>
-            <div class="info-block__item">
+            <div class="info-block__item js-animate-from-bot-slow">
               <div class="info-block__row">
                 <div class="info-block__count">
                   936
@@ -517,7 +521,7 @@
                 </div>
               </div>
             </div>
-            <div class="info-block__item">
+            <div class="info-block__item js-animate-from-bot-slow">
               <div class="info-block__row">
                 <div class="info-block__count">
                   2
@@ -534,7 +538,7 @@
                 </div>
               </div>
             </div>
-            <div class="info-block__item">
+            <div class="info-block__item js-animate-from-bot-slow">
               <div class="info-block__row">
                 <div class="info-block__count">
                   70
@@ -554,12 +558,12 @@
           </div>
         </div>
 
-        <h2 class="title title__white" id="why">
+        <h2 class="title title__white js-animate-from-bot" id="why">
           Почему клиенты выбирают нас:
         </h2>
 
         <div class="whyus">
-          <div class="whyus__item">
+          <div class="whyus__item js-animate-from-bot-slow">
             <div class="whyus__title">Полная конфиденциальность</div>
             <div class="whyus__text">При желании мы организуем доставку так, что Вы не будете фигурировать в официальных документах</div>
             <div class="whyus__icon">
@@ -568,7 +572,7 @@
               </svg>
             </div>
           </div>
-          <div class="whyus__item">
+          <div class="whyus__item js-animate-from-bot-slow">
             <div class="whyus__title">Оформление и растоможка польностью на нас</div>
             <div class="whyus__text">Наш курьер подготовит все необходимые документы, уплатит все пошлины, заполнит таможенную декларацию и пройдет таможенный контроль</div>
             <div class="whyus__icon">
@@ -577,7 +581,7 @@
               </svg>
             </div>
           </div>
-          <div class="whyus__item">
+          <div class="whyus__item js-animate-from-bot-slow">
             <div class="whyus__title">Наличие склада в Китае и России</div>
             <div class="whyus__text">Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.</div>
             <div class="whyus__icon">
@@ -588,7 +592,7 @@
           </div>
         </div>
 
-        <div class="mid-form__btn-container">
+        <div class="mid-form__btn-container js-animate-from-bot">
           <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
@@ -606,11 +610,11 @@
     <section class="container" id="scheme">
       <div class="container__content">
         <div class="scheme">
-          <h2 class="title title__blue">
+          <h2 class="title title__blue js-animate-from-bot">
             Схема работы:
           </h2>
           <div class="scheme__container">
-            <div class="scheme__item">
+            <div class="scheme__item js-animate-from-bot-slow">
               <div class="scheme__count">
                 1
               </div>
@@ -624,7 +628,7 @@
                 на сайте либо по телефону
               </div>
             </div>
-            <div class="scheme__item">
+            <div class="scheme__item js-animate-from-bot-slow">
               <div class="scheme__count">
                 2
               </div>
@@ -638,7 +642,7 @@
                 согласовываем сроки, стоимость
               </div>
             </div>
-            <div class="scheme__item">
+            <div class="scheme__item js-animate-from-bot-slow">
               <div class="scheme__count">
                 3
               </div>
@@ -652,7 +656,7 @@
                 с отправителем (или с Вами, или с Вашим человеком в любой точке мира), принимаем груз
               </div>
             </div>
-            <div class="scheme__item">
+            <div class="scheme__item js-animate-from-bot-slow">
               <div class="scheme__count">
                 4
               </div>
@@ -668,7 +672,7 @@
             </div>
           </div>
         </div>
-        <div class="free-consult-container">
+        <div class="free-consult-container js-animate-from-bot-slow">
           <button class="submit modal" data-popup="#form">
             <span class="submit__shadow">
               <span class="submit__content">
@@ -682,10 +686,10 @@
         </div>
 
         <div class="comments" id="reviews">
-          <h2 class="title title__blue">
+          <h2 class="title title__blue js-animate-from-bot">
             Что говорят клиенты:
           </h2>
-          <div class="swiper-container">
+          <div class="swiper-container js-animate-from-bot-slow">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="comment">

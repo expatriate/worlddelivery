@@ -34,6 +34,11 @@ body, html {
     }
   }
 
+  &__main {
+    display: flex;
+    flex-direction: row;
+  }
+
   &__map {
     background: url('../img/map.png') no-repeat;
     background-position: center 20px;
@@ -183,10 +188,13 @@ body, html {
       }
     }
 
+    transform: perspective(300px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+
     &:hover {
       transition: all 0.2s ease;
-      box-shadow: 0px 0px 40px rgba(255,255,255,.4);
-      transform: perspective(300px) rotateY(-6deg);
+      box-shadow: 0px 0px 40px rgba(0,0,0,.2);
+      transform: perspective(300px) rotateY(-6deg) rotateX(0deg) rotateZ(0deg);
+      
       z-index: 2;
     }
   }
@@ -248,10 +256,13 @@ body, html {
       }
     }
 
+    transform: perspective(300px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+
     &:hover {
       transition: all 0.2s ease;
       box-shadow: 0px 0px 40px rgba(0,0,0,.2);
-      transform: perspective(300px) rotateY(-6deg);
+      transform: perspective(300px) rotateY(-6deg) rotateX(0deg) rotateZ(0deg);
+      
       z-index: 2;
     }
   }
@@ -287,6 +298,7 @@ body, html {
     flex-direction: row;
     align-items: center;
     padding: 24px 0px; 
+    z-index: 1;
   }
   &-col {
     display: flex;
@@ -318,6 +330,15 @@ body, html {
 }
 .left-pad {
   margin: 64px 0px 32px 0px;
+  flex: 1;
+  width: 60%;
+  z-index: 1;
+}
+.right-pad {
+  position: absolute;
+  right: 0;
+  top:0;
+  z-index: 0;
 }
 
 .navigation {
@@ -1197,6 +1218,54 @@ input {
 .hidden {
   display: none;
 }
+
+/*
+* ANIMATIONS
+*/
+.js-animate-from-bot, .js-animate-from-bot-slow, .js-animate-from-top, .js-animate-from-top-slow {
+  opacity: 0;
+}
+.anim-top-invis-0 {
+    opacity: 0;
+    transform: translateY(100px);
+}
+.anim-top-invis-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.anim-top-invis-slow-0 {
+    opacity: 0;
+    transform: translateY(50px);
+}
+.anim-top-invis-slow-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.anim-bot-invis-0 {
+    opacity: 0;
+    transform: translateY(-100px);
+}
+.anim-bot-invis-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+.anim-bot-invis-slow-0 {
+    opacity: 0;
+    transform: translateY(-50px);
+}
+.anim-bot-invis-slow-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease;
+}
+
+
 /* 
 #header {
   position: absolute;
