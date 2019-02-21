@@ -10,7 +10,45 @@ $(document).ready(function() {
       el: '.swiper-pagination',
       clickable: true,
     },
+    breakpoints: {
+      1200: {
+        spaceBetween: 40
+      },
+      1400: {
+        spaceBetween: 40
+      },
+      720: {
+        slidesPerView: 1,
+      }
+    },
   });
+
+  if (window.innerWidth <= 1200) {
+    $('.whenneeds').wrapInner('<div class="whenneeds__wrapper"></div>');
+    $('.whenneeds').append('<div class="swiper-pagination"></div>')
+    $('.whenneeds__item').addClass('swiper-slide');
+
+
+    var swiper1 = new Swiper('.whenneeds', {
+      slidesPerView: 1,
+      spaceBetween: 0,
+      slideClass: 'whenneeds__item',
+      wrapperClass: 'whenneeds__wrapper',
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          spaceBetween: 40,
+          slidesPerView: 2,
+        },
+        720: {
+          slidesPerView: 1,
+        }
+      },
+    });
+  }
 
   $(document).on('click', 'button.modal', function(e) {
     e.preventDefault();
@@ -92,7 +130,7 @@ $(document).ready(function() {
   requestAnimFrame(animate);
 
   function animate() {
-      var offset = 1;
+      var offset = 1.8;
       
       /*if(id==1) offset = 1;
       else if(id==2) offset = 2;*/
@@ -157,14 +195,14 @@ function loadAnimation() {
         repeat: false,
         callbackFunction: function callbackFunction(elem, action) {
             var time = 200;
-            if ($(elem).hasClass('blocks__item') || 
+            /*if ($(elem).hasClass('blocks__item') || 
                 $(elem).hasClass('half-content__item') || 
                 $(elem).hasClass('whenneeds__item') || 
                 $(elem).hasClass('info-block__item') || 
                 $(elem).hasClass('whyus__item') ||
                 $(elem).hasClass('scheme__item')) {
                 time = 400 * $(elem).index();
-            }
+            }*/
             setTimeout(function () {
                 $(elem).addClass('anim-bot-invis-slow-1').removeClass('anim-bot-invis-slow-0');
             }, time);

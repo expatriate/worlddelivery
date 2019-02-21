@@ -32,6 +32,11 @@ body, html {
     &--nopad {
       padding-bottom: 0px;
     }
+
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      padding-bottom: 36px;
+    }
   }
 
   &__main {
@@ -83,6 +88,10 @@ body, html {
 
     background-repeat: no-repeat;
     background-position: bottom right;
+
+    @media screen and (max-width: 720px) {
+      width: auto;
+    }
 
     &:nth-child(1) {
       background-color: #082863;
@@ -189,13 +198,16 @@ body, html {
     }
 
     transform: perspective(300px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
-
     &:hover {
       transition: all 0.2s ease;
       box-shadow: 0px 0px 40px rgba(0,0,0,.2);
       transform: perspective(300px) rotateY(-6deg) rotateX(0deg) rotateZ(0deg);
       
       z-index: 2;
+
+      @media screen and (max-width: 720px) {
+        transform: perspective(300px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+      }
     }
   }
 
@@ -204,12 +216,68 @@ body, html {
     font-size: 28px;
     margin-bottom: 16px;
     line-height: 1;
+    @media screen and (max-width: 720px) {
+      font-size: 24px;
+    }
   }
 
   &__text {
     font-family: MuseoSansSemiNormal;
     font-size: 15px;
+
+    @media screen and (max-width: 720px) {
+      font-size: 14px;
+      font-family: MuseoSansThin;
+    }
   }
+}
+
+@media screen and (max-width: 720px) {
+   .whenneeds {
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    list-style:none;
+    display: block;
+    padding:0;
+    padding-bottom: 54px;
+    z-index:1;
+    height: 100%;
+    width: auto;
+    margin: 36px 24px;
+    flex-wrap:nowrap;
+    &__item {
+      display: flex;
+    }
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      box-sizing: content-box;
+    }
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 8px; 
+    }
+    .swiper-pagination-bullet {
+      opacity: 1;
+      background: transparent;
+      border: 1px solid #ffffff;
+    }
+    .swiper-pagination-bullet-active {
+      background: #ffffff;
+      border: 1px solid #ffffff;
+    }
+  } 
 }
 
 .whyus {
@@ -217,6 +285,12 @@ body, html {
   width: 100%;
   flex-direction: row;
   margin: 64px 0px;
+
+  @media screen and (max-width: 720px) {
+    width: auto;
+    flex-direction: column;
+    margin: 48px 24px;
+  }
   
 
   &__item {
@@ -226,6 +300,10 @@ body, html {
     flex-direction: column;
     transition: all 0.4s ease;
     //box-shadow: 0px 0px 50px rgba(0,0,0,.2);
+    @media screen and (max-width: 720px) {
+      padding: 24px;
+      min-height: 260px;
+    }
 
 
     &:nth-child(1) {
@@ -262,7 +340,9 @@ body, html {
       transition: all 0.2s ease;
       box-shadow: 0px 0px 40px rgba(0,0,0,.2);
       transform: perspective(300px) rotateY(-6deg) rotateX(0deg) rotateZ(0deg);
-      
+      @media screen and (max-width: 720px) {
+        transform: perspective(300px) rotateY(0deg) rotateX(0deg) rotateZ(0deg);
+      }
       z-index: 2;
     }
   }
@@ -272,6 +352,10 @@ body, html {
     font-size: 28px;
     margin-bottom: 16px;
     line-height: 1;
+
+    @media screen and (max-width: 720px) {
+      font-size: 20px;
+    }
   }
 
   &__icon {
@@ -279,6 +363,9 @@ body, html {
     flex: 1;
     display: flex;
     align-items: flex-end;
+    @media screen and (max-width: 720px) {
+      justify-content: center;
+    }
 
     svg {
       width: 80px;
@@ -289,6 +376,11 @@ body, html {
   &__text {
     font-family: MuseoSansSemiNormal;
     font-size: 15px;
+
+    @media screen and (max-width: 720px) {
+      font-family: MuseoSansThin;
+      font-size: 14px;
+    }
   }
 }
 
@@ -299,17 +391,25 @@ body, html {
     align-items: center;
     padding: 24px 0px; 
     z-index: 1;
+    
+    @media screen and (max-width: 720px) {
+      padding: 24px; 
+    }
   }
   &-col {
     display: flex;
     flex-direction: column;
     flex: 1;
+    @media screen and (max-width: 720px) {
+      display: none;
+    }
   }
   &-links {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     justify-content: flex-end;
+
 
     a {
       color: #ffffff;
@@ -333,12 +433,27 @@ body, html {
   flex: 1;
   width: 60%;
   z-index: 1;
+
+  @media screen and (max-width: 720px) {
+    width: 100%;
+    margin: 0px;
+    padding: 0px 24px; 
+  }
 }
 .right-pad {
   position: absolute;
   right: 0;
   top:0;
   z-index: 0;
+  @media screen and (max-width: 720px) {
+    left: 0;
+    top: 10%;
+    right: auto;
+    canvas {
+      width: 100%;
+      opacity: 0.2;
+    }
+  }
 }
 
 .navigation {
@@ -364,6 +479,12 @@ body, html {
   font-size: 48px;
   line-height: 1.1;
   margin: 16px 0px;
+
+  @media screen and (max-width: 720px) {
+    max-width: 100%;
+    font-size: 28px;
+    margin: 16px 0px;
+  }
 }
 .semi-title {
   font-size: 22px;
@@ -371,6 +492,11 @@ body, html {
   color: #02225c;
   margin: 16px 0px;
   font-weight: 500;
+
+  @media screen and (max-width: 720px) {
+    font-size: 18px;
+    padding: 14px 0px 64px 0px;
+  }
 }
 .left-title {
   max-width: 300px;
@@ -380,24 +506,50 @@ body, html {
   line-height: 1.1;
   margin:0;
   padding: 0;
+
+  @media screen and (max-width: 720px) {
+    max-width: auto;
+    font-size: 28px;
+  }
 }
 .logo {
   width: 350px;
+  @media screen and (max-width: 720px) {
+    width: 180px;
+    img {
+      width: 180px;
+    }
+  }
 }
 
 .mid-form {
   display: block;
   margin: 36px 0px;
 
+  @media screen and (max-width: 720px) {
+    margin: 36px 24px;
+
+    .row {
+      flex-direction: column;
+    }
+  }
+
   input, .buffer {
     flex: 1;
   }
   .buffer {
     padding: 8px 24px 10px 24px;
+    @media screen and (max-width: 720px) {
+      padding: 0px;
+    }
   }
   div {
     input:not(:last-child) {
       margin-right: 24px;
+
+      @media screen and (max-width: 720px) {
+        margin-right: 0px;
+      }
     }
   }
 
@@ -415,6 +567,9 @@ body, html {
     font-size: 18px;
     color: #273f6f;
     font-family: MuseoSansSemibold;
+    @media screen and (max-width: 720px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -427,10 +582,19 @@ body, html {
     display: flex;
     flex-direction: row;
     margin-bottom: 36px;
+
+    @media screen and (max-width: 720px) {
+      margin-bottom: 24px;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__left {
     margin: 16px 16px 16px 0px;
+    @media screen and (max-width: 720px) {
+      margin: 16px 0px 16px 0px;
+    }
   }
 
   &__right {
@@ -438,12 +602,22 @@ body, html {
     margin: 16px 32px 16px 16px;
     padding-left: 32px;
     border-left: 1px solid #02225c;
+
+    @media screen and (max-width: 720px) {
+      border-left: 0px;
+      margin: 16px 0px;
+      padding-left: 0px;
+    }
   }
 
   &__left, &__right {
     display: flex;
     flex-direction: column;
     width: 50%;
+
+    @media screen and (max-width: 720px) {
+      width: 100%;
+    }
   }
 
   &__normal {
@@ -451,12 +625,20 @@ body, html {
     font-family: MuseoSansNormal;
     color: #02225c;
     margin-bottom: 16px;
+    @media screen and (max-width: 720px) {
+      font-size: 16px;
+      text-align: center;
+    }
   }
 
   &__small {
     font-size: 15px;
     font-family: MuseoSansThin;
     color: #02225c;
+
+    @media screen and (max-width: 720px) {
+      text-align: center;
+    }
   }
 }
 
@@ -468,6 +650,12 @@ body, html {
   padding: 0;
   line-height: 1.1;
   letter-spacing: 1px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 24px;
+    max-width: 100%;
+    padding: 0px 24px; 
+  }
 
   &__blue {
     color: #02225c;
@@ -488,6 +676,10 @@ body, html {
   &__center {
     text-align: center;
     max-width: 100%;
+
+    @media screen and (max-width: 720px) {
+      text-align: left;
+    }
   }
 }
 
@@ -496,11 +688,19 @@ body, html {
   display: flex;
   flex-direction: row;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    padding: 0px 24px
+  }
+
   &__item {
     flex: 1;
 
     &:not(:first-child) {
       margin-left: 16px;
+      @media screen and (max-width: 720px) {
+        margin-left: 0px;
+      }
     }
 
     svg {
@@ -516,6 +716,11 @@ body, html {
         filter: drop-shadow( 0px 0px 3px rgba(255, 255, 255, 1));
       }
     }
+
+    @media screen and (max-width: 720px) {
+      text-align: center;
+      margin-top: 32px;
+    }
   }
   &__title {
     font-size: 22px;
@@ -525,6 +730,11 @@ body, html {
     margin: 16px 0;
     padding-right: 24px;
     letter-spacing: 1px;
+
+    @media screen and (max-width: 720px) {
+      padding-right: 0px;
+      text-align: center;
+    }
   }
 
   &__descr {
@@ -533,6 +743,11 @@ body, html {
     font-family: MuseoSansSemibold;
     line-height: 1.7;
     padding-right: 24px;
+
+    @media screen and (max-width: 720px) {
+      text-align: center;
+      padding-right: 0px;
+    }
   }
 }
 
@@ -543,9 +758,20 @@ body, html {
   width: 100%;
   padding: 72px 0px;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    width: auto;
+    padding: 36px 0px;
+    margin: 0px 24px;
+  }
+
   &__left {
     width: 30%;
     padding-top: 36px;
+    @media screen and (max-width: 720px) {
+      width: auto;
+      padding-top: 24px;
+    }
   }
 
   &__container {
@@ -553,6 +779,12 @@ body, html {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      padding-top: 24px;
+      width: auto;
+    }
   }
 
   &__item {
@@ -560,6 +792,10 @@ body, html {
     display: flex;
     flex-direction: column;
     margin-bottom: 36px;
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      transform: translateX(0%);
+    }
   }
 
   &__row {
@@ -580,6 +816,12 @@ body, html {
     justify-content: flex-end;
     align-items: flex-end;
     line-height: 74px;
+
+    @media screen and (max-width: 720px) {
+      font-size: 64px;
+      line-height: 50px;
+      margin-right: 8px;
+    }
   }
 
   &__title {
@@ -588,6 +830,9 @@ body, html {
     color: #ffffff;
     line-height: 1;
     align-items: flex-end;
+    @media screen and (max-width: 720px) {
+      font-size: 24px;
+    }
   }
 
   &__text {
@@ -597,6 +842,10 @@ body, html {
     opacity: 1.8;
     margin-top: 8px;
     max-width: 45%;
+    @media screen and (max-width: 720px) {
+      max-width: 50%;
+      font-size: 14px;
+    }
   }
 }
 .comments {
@@ -608,6 +857,11 @@ body, html {
     width: 100%;
     height: 100%;
     margin-top: 54px;
+
+    @media screen and (max-width: 720px) {
+      width: auto;
+      margin: 36px 24px;
+    }
   }
   .swiper-slide {
     display: flex;
@@ -631,6 +885,7 @@ body, html {
     border: 1px solid #ffffff;
   }
 }
+
 
 .comment {
   display: flex;
@@ -667,15 +922,29 @@ body, html {
     align-items: flex-end;
     margin-bottom: 28px;
 
+    @media screen and (max-width: 720px) {
+      margin-top: 16px;
+      margin-bottom: 28px;
+    }
+
     span {
       flex: 1;
       font-size: 28px;
       color: #ffffff;
       font-family: MuseoSansSemibold;
+
+      @media screen and (max-width: 720px) {
+        font-size: 20px;
+      }
     }
     img {
       width: 59px;
       height: 44px;
+
+      @media screen and (max-width: 720px) {
+        width: 30px;
+        height: 22px;
+      }
     }
   }
 
@@ -684,6 +953,10 @@ body, html {
     font-size: 15px;
     font-family: MuseoSansThin;
     color: #ffffff;
+
+    @media screen and (max-width: 720px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -699,6 +972,11 @@ body, html {
     flex-direction: row;
     margin-top: 32px;
     margin-bottom: 32px;
+
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      margin: 32px 24px;
+    }
   }
 
   &__item {
@@ -707,6 +985,15 @@ body, html {
     position: relative;
     &:last-child {
       margin-right: 0px;
+    }
+
+    @media screen and (max-width: 720px) {
+      margin-right: 0px;
+      margin-left: 50px;
+      margin-bottom: 36px;
+      &:last-child {
+        margin-right: 0px;
+      }
     }
   }
 
@@ -720,6 +1007,9 @@ body, html {
     padding-left: 32px;
     z-index: 1;
     position: relative;
+    @media screen and (max-width: 720px) {
+      font-size: 24px;
+    }
   }
 
   &__count {
@@ -730,6 +1020,12 @@ body, html {
     font-size: 191px;
     font-family: GilroyExtraBold;
     z-index: 0;
+
+    @media screen and (max-width: 720px) {
+      font-size: 120px;
+      top: 180px;
+      left: -40px;
+    }
   }
 
   &__text {
@@ -739,6 +1035,11 @@ body, html {
     padding-left: 32px;
     z-index: 1;
     position: relative;
+
+     @media screen and (max-width: 720px) {
+      font-size: 14px;
+      font-family: MuseoSansThin;
+    }
   }
 
   &__img {
@@ -756,12 +1057,24 @@ body, html {
   margin-top: 32px;
   margin-bottom: 32px;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    width: auto;
+    margin: 0px 24px;
+    padding-top: 24px;
+  }
+
   &__text {
     font-size: 22px;
     color: #273f6f;
     font-family: MuseoSansSemibold;
     line-height: 1.1;
     flex: 1;
+    @media screen and (max-width: 720px) {
+      text-align: center;
+      margin-top: 14px;
+      font-size: 16px;
+    }
   }
 
   &__item {
@@ -770,8 +1083,17 @@ body, html {
     flex-direction: row;
     align-items: center;
 
+    @media screen and (max-width: 720px) {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
     &:first-child {
       margin-right: 64px;
+      @media screen and (max-width: 720px) {
+        margin-right: 0px;
+      }
     }
 
     svg {
@@ -780,6 +1102,10 @@ body, html {
       width: 80px;
       height: 64px;
       margin-right: 24px;
+
+      @media screen and (max-width: 720px) {
+        margin-right: 0px;
+      }
     }
 
     &:hover {
@@ -796,6 +1122,11 @@ body, html {
   flex-direction: row;
   padding: 32px 0px;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    margin: 0px 24px;
+  }
+
   &__item {
     flex: 1
   }
@@ -808,7 +1139,11 @@ body, html {
   &__img {
     width: 81px;
     height: 89px;
-    margin-right: 32px
+    margin-right: 32px;
+
+    @media screen and (max-width: 720px) {
+      margin-right: 24px;
+    }
   }
 }
 
@@ -821,19 +1156,36 @@ body, html {
   flex-direction: row;
   flex-wrap: wrap;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+
   &__left {
     transform: translateX(-50px);
+    @media screen and (max-width: 720px) {
+      transform: translateX(0px);
+    }
   }
 
   &__right {
     padding-left: 50px;
+    @media screen and (max-width: 720px) {
+      padding-left: 0px;
+    }
   }
 
   &__item {
-    width: 50%;
+    width: 100%;
+    margin: 12px 0px 24px 0px;
+    min-height: 100px;
     display: flex;
     flex-direction: row;
-    min-height: 220px;
+
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      min-height: auto;
+      margin: 12px 0px
+    }
 
     &:hover {
       .half-content__button--plus {
@@ -855,6 +1207,14 @@ body, html {
     margin: 8px 0;
     padding-right: 24px;
     letter-spacing: 1px;
+
+    @media screen and (max-width: 720px) {
+      padding-right: 0px;
+      font-size: 18px;
+      .mobile-hidden {
+        display: none;
+      }
+    }
   }
 
   &__item-container {
@@ -869,6 +1229,11 @@ body, html {
     font-family: MuseoSansSemibold;
     line-height: 1.5;
     padding-right: 24px;
+
+    @media screen and (max-width: 720px) {
+      padding-right: 0px;
+      font-size: 14px;
+    }
   }
 
   &__button--minus {
@@ -941,12 +1306,23 @@ body, html {
   flex-direction: row;
   position: relative;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+  }
+
   &__left {
     width: 30%;
+
+    @media screen and (max-width: 720px) {
+      width: auto;
+    }
 
     img {
       margin-top: 58px;
       margin-bottom: 42px;
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
     }
   }
   &__right {
@@ -960,6 +1336,10 @@ body, html {
       width: 100%;
       height: 100%;
       object-fit: cover;
+
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
     }
   }
 }
@@ -971,12 +1351,21 @@ body, html {
     font-family: GilroyExtraBold;
     color: #ffffff;
     margin-bottom: 48px;
+
+    @media screen and (max-width: 720px) {
+      font-size: 24px;
+      margin-top: 36px;
+    }
   }
   a, span {
     font-size: 22px;
     color: #ffffff;
     font-family: MuseoSansThin;
     text-decoration: none;
+
+    @media screen and (max-width: 720px) {
+      font-size: 18px;
+    }
   }
 
   &__item {
@@ -989,11 +1378,23 @@ body, html {
       width: 32px;
       height: 32px;
       fill: #ffffff;
+
+      @media screen and (max-width: 720px) {
+        width: 16px;
+        height: 16px;
+      }
     }
 
     &:last-child {
       margin-bottom: 60px;
+      @media screen and (max-width: 720px) {
+        margin-bottom: 0px;
+      }
     }
+  }
+
+  @media screen and (max-width: 720px) {
+    margin: 0px 24px;
   }
 }
 
@@ -1003,12 +1404,24 @@ body, html {
   align-items: center;
   padding: 40px 0px;
 
+  @media screen and (max-width: 720px) {
+    flex-direction: column;
+    padding: 32px 0px;
+    margin: 0px 24px;
+  }
+
   &__text {
     font-size: 18px;
     color: #ffffff;
     font-family: MuseoSansNormal;
     margin-right: 24px;
     flex: 1;
+
+    @media screen and (max-width: 720px) {
+      margin-right: 0px;
+      text-align: center;
+      margin-bottom: 16px;
+    }
   }
 
   input {
@@ -1018,13 +1431,28 @@ body, html {
     margin-bottom: 0px;
     margin-right: 8px;
     font-family: MuseoSansThin;
+
+    @media screen and (max-width: 720px) {
+      width: 100%;
+      margin-bottom: 16px;
+    }
     &::placeholder {
       color: #ffffff;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    form {
+      text-align: center;
     }
   }
 }
 
 .showmore {
+
+  @media screen and (max-width: 720px) {
+    display: none;
+  }
 
   &__container {
     width: 100%;
@@ -1217,6 +1645,9 @@ input {
 
 .hidden {
   display: none;
+  @media screen and (max-width: 720px) {
+    display: block;
+  }
 }
 
 /*
@@ -1265,6 +1696,12 @@ input {
     transition: all 0.6s ease;
 }
 
+
+@media screen and (max-width: 720px) {
+  .mobile-hidden {
+    display: none;
+  }
+}
 
 /* 
 #header {
