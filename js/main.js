@@ -30,47 +30,8 @@ function getUrlParams() {
   return query_string;
 }
 
-var params = {
-  usa: {
-    title: 'Срочная авиадоставка грузов из США и&nbsp;выполнение поручений через личного авиакурьера',
-    plane: 'planeusa.png',
-    ucan: ['отправить надежного человека с посылкой/ поручением из России в США','реализовать доставку срочного или важного груза из США вам в Россию!'],
-    whyus: {
-      title: 'Наличие складов в России',
-      text: 'Вам не нужно заботиться о том, где временно разместить ваш груз при отправке или получении. Для этого у нас есть собственные склады, полностью соответствующие нормам пожарной безопасности и санитарным-эпидемиологическим нормам.'
-    }
-  },
-  china: {
-    title: 'Срочная авиадоставка грузов из Китая и&nbsp;выполнение поручений через личного авиакурьера',
-    plane: 'planechina.png',
-    ucan: ['отправить надежного человека с посылкой/ поручением из России в Китай','реализовать доставку срочного или важного груза из Китая вам в Россию!'],
-    whyus: {
-      title: 'Наличие склада в Китае и России',
-      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
-    }
-  },
-  world: {
-    title: 'Срочная авиадоставка грузов по всему миру и&nbsp;выполнение поручений через личного авиакурьера',
-    plane: 'plane.png',
-    ucan: ['отправить надежного человека с посылкой/ поручением из России в любую точку мира','реализовать доставку срочного или важного груза из любой точки мира вам в Россию!'],
-    whyus: {
-      title: 'Наличие склада в Китае и России',
-      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
-    }
-  },
-  clear: {
-    title: 'Срочная авиадоставка грузов по всему миру и&nbsp;выполнение поручений через личного авиакурьера',
-    plane: 'planeclear.png',
-    ucan: ['отправить надежного человека с посылкой/ поручением из России в любую точку мира','реализовать доставку срочного или важного груза из любой точки мира вам в Россию!'],
-    whyus: {
-      title: 'Наличие склада в Китае и России',
-      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
-    }
-  }
-}
-
 function changeTitles() {
-  var paramsObj = params[settings.mode];
+  var paramsObj = data[settings.mode];
   $('#js-landing-title').html(paramsObj.title);
   $('#js-landing-ucan-1').html(paramsObj.ucan[0]);
   $('#js-landing-ucan-2').html(paramsObj.ucan[1]);
@@ -86,7 +47,7 @@ $(document).ready(function() {
   var params = getUrlParams();
   
 
-  settings.mode = params.mode ? params.mode : 'clear';
+  settings.mode = params.mode && data[params.mode] !== undefined ? params.mode : 'clear';
 
   changeTitles();
 
@@ -187,39 +148,67 @@ $(document).ready(function() {
   var stage = new PIXI.Stage(0xd92256);
 
   // Container
-  var container = new PIXI.DisplayObjectContainer();
-  stage.addChild(container);
-
-  var container1 =  new PIXI.DisplayObjectContainer();
+  var container1 = new PIXI.DisplayObjectContainer();
+  var container2 =  new PIXI.DisplayObjectContainer();
+  var container3 = new PIXI.DisplayObjectContainer();
+  var container4 = new PIXI.DisplayObjectContainer();
   stage.addChild(container1);
-
-  // Background
-  var bg = PIXI.Sprite.fromImage("img/plane.jpg");
-  container.addChild(bg);
-
-  // Background
-  var bg1 = PIXI.Sprite.fromImage('img/' + settings.plane);
-  container1.addChild(bg1);
+  stage.addChild(container2);
+  stage.addChild(container3);
+  stage.addChild(container4);
 
 
-  // Filter
-  var displacementTexture = PIXI.Texture.fromImage("img/noise.png");
-  var displacementFilter = new PIXI.DisplacementFilter(displacementTexture);
+ // Background
+  var bg = PIXI.Sprite.fromImage('img/planeunder.jpg');
+  container1.addChild(bg);
+
+  // Plane
+  var planeline = PIXI.Sprite.fromImage("img/planeline.png");
+  container2.addChild(planeline);
+
+  // on top
+  var plane = PIXI.Sprite.fromImage('img/' + settings.plane);
+  container3.addChild(plane);
+
+  // on top
+  var top = PIXI.Sprite.fromImage("img/plane.png");
+  container4.addChild(top);
+
+
+  // Filters
+  var displacementTextureBg = PIXI.Texture.fromImage("img/noise2.png");
+  var displacementFilterBg = new PIXI.DisplacementFilter(displacementTextureBg);
+
+  var displacementTextureLines = PIXI.Texture.fromImage("img/noise.png");
+  var displacementFilterLines = new PIXI.DisplacementFilter(displacementTextureLines);
+
+  var displacementTextureTop = PIXI.Texture.fromImage("img/noise.png");
+  var displacementFilterTop = new PIXI.DisplacementFilter(displacementTextureTop);
+
+
 
   // Apply it
-  container.filters = [displacementFilter];
+  container1.filters = [displacementFilterBg];
+  container2.filters = [displacementFilterLines];
+  container4.filters = [displacementFilterTop];
 
   // Animate
   requestAnimFrame(animate);
 
   function animate() {
-      var offset = 1.8;
-      
-      /*if(id==1) offset = 1;
-      else if(id==2) offset = 2;*/
+      var offsetbg = 0.1;
+      var offsetlines = 0.6;
+      var offsettop = 1;
 
-      displacementFilter.offset.x += offset;
-      displacementFilter.offset.y += offset;
+      displacementFilterBg.offset.x += offsetbg;
+      displacementFilterBg.offset.y += offsetbg;
+
+      displacementFilterTop.offset.x += offsettop;
+      displacementFilterTop.offset.y += offsettop;
+      
+      displacementFilterLines.offset.x += offsetlines;
+      displacementFilterLines.offset.y += offsetlines;
+
 
       renderer.render(stage);
       requestAnimFrame(animate);
