@@ -149,12 +149,14 @@ $(document).ready(function() {
 
   // Container
   var container1 = new PIXI.DisplayObjectContainer();
-  var container2 =  new PIXI.DisplayObjectContainer();
+  var container2 = new PIXI.DisplayObjectContainer();
   var container3 = new PIXI.DisplayObjectContainer();
   var container4 = new PIXI.DisplayObjectContainer();
+  var container5 = new PIXI.DisplayObjectContainer();
   stage.addChild(container1);
   stage.addChild(container2);
   stage.addChild(container3);
+  stage.addChild(container5);
   stage.addChild(container4);
 
 
@@ -173,6 +175,9 @@ $(document).ready(function() {
   // on top
   var top = PIXI.Sprite.fromImage("img/plane.png");
   container4.addChild(top);
+
+  var topstatic = PIXI.Sprite.fromImage("img/planestatic.png");
+  container5.addChild(topstatic);
 
 
   // Filters
@@ -196,9 +201,9 @@ $(document).ready(function() {
   requestAnimFrame(animate);
 
   function animate() {
-      var offsetbg = 0.1;
+      var offsetbg = 0.15;
       var offsetlines = 0.6;
-      var offsettop = 1;
+      var offsettop = 5;
 
       displacementFilterBg.offset.x += offsetbg;
       displacementFilterBg.offset.y += offsetbg;
