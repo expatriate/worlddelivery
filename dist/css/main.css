@@ -899,8 +899,8 @@ body, html {
         display: none; } }
   @media screen and (min-width: 721px) and (max-width: 1250px) {
     .right-pad {
-      top: 16%;
-      right: -10%; }
+      top: 0;
+      right: -5%; }
       .right-pad canvas {
         width: 80%;
         background-color: #ffffff; } }
