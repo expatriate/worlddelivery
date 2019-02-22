@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/vendor.main.css">
-    <script src="https://cdn.rawgit.com/GoodBoyDigital/pixi.js/v1.6.1/bin/pixi.js"></script>
     <script src="js/vendor.min.js"></script>
 
     <title>Мировая доставка</title>
@@ -42,7 +41,7 @@
     <section class="container">
       <div class="container__content container__main">
         <div class="left-pad">
-          <h1 class="main-title js-animate-from-bot">
+          <h1 class="main-title js-animate-from-bot" id="js-landing-title">
             Срочная авиадоставка и&nbsp;выполнение поручений по&nbsp;всему миру через личного авиакурьера
           </h1>
           <h3 class="semi-title js-animate-from-bot">
@@ -291,7 +290,7 @@
             <svg role="img">
               <use xlink:href="map.svg#ucan1"/>
             </svg>
-            <div class="ucan__text">
+            <div class="ucan__text" id="js-landing-ucan-1">
               отправить надежного человека с посылкой/ поручением из России в любую точку мира
             </div>
           </div>
@@ -299,7 +298,7 @@
             <svg role="img">
               <use xlink:href="map.svg#ucan2"/>
             </svg>
-            <div class="ucan__text">
+            <div class="ucan__text" id="js-landing-ucan-2">
               реализовать доставку срочного или важного груза из любой точки мира вам в Россию!
             </div>
           </div>
@@ -572,8 +571,8 @@
             </div>
           </div>
           <div class="whyus__item">
-            <div class="whyus__title">Наличие склада в Китае и России</div>
-            <div class="whyus__text">Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.</div>
+            <div class="whyus__title" id="js-landing-whyus-title">Наличие склада в Китае и России</div>
+            <div class="whyus__text"  id="js-landing-whyus-text">Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.</div>
             <div class="whyus__icon">
               <svg role="img">
                 <use xlink:href="map.svg#whyus3"/>

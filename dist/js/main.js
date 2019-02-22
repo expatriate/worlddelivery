@@ -1,5 +1,94 @@
+// Delivery 
+
+var settings = {
+  mode: 'clear',
+  plane: 'planeclear.png',
+};
+
+function getUrlParams() {
+
+  var query = window.location.search.replace('?', '');
+
+  var vars = query.split("&");
+  var query_string = {};
+  for (var i = 0; i < vars.length; i++) {
+    var pair = vars[i].split("=");
+    var key = decodeURIComponent(pair[0]);
+    var value = decodeURIComponent(pair[1]);
+    // If first entry with this name
+    if (typeof query_string[key] === "undefined") {
+      query_string[key] = decodeURIComponent(value);
+      // If second entry with this name
+    } else if (typeof query_string[key] === "string") {
+      var arr = [query_string[key], decodeURIComponent(value)];
+      query_string[key] = arr;
+      // If third or later entry with this name
+    } else {
+      query_string[key].push(decodeURIComponent(value));
+    }
+  }
+  return query_string;
+}
+
+var params = {
+  usa: {
+    title: 'Срочная авиадоставка грузов из США и&nbsp;выполнение поручений через личного авиакурьера',
+    plane: 'planeusa.png',
+    ucan: ['отправить надежного человека с посылкой/ поручением из России в США','реализовать доставку срочного или важного груза из США вам в Россию!'],
+    whyus: {
+      title: 'Наличие складов в России',
+      text: 'Вам не нужно заботиться о том, где временно разместить ваш груз при отправке или получении. Для этого у нас есть собственные склады, полностью соответствующие нормам пожарной безопасности и санитарным-эпидемиологическим нормам.'
+    }
+  },
+  china: {
+    title: 'Срочная авиадоставка грузов из Китая и&nbsp;выполнение поручений через личного авиакурьера',
+    plane: 'planechina.png',
+    ucan: ['отправить надежного человека с посылкой/ поручением из России в Китай','реализовать доставку срочного или важного груза из Китая вам в Россию!'],
+    whyus: {
+      title: 'Наличие склада в Китае и России',
+      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
+    }
+  },
+  world: {
+    title: 'Срочная авиадоставка грузов по всему миру и&nbsp;выполнение поручений через личного авиакурьера',
+    plane: 'plane.png',
+    ucan: ['отправить надежного человека с посылкой/ поручением из России в любую точку мира','реализовать доставку срочного или важного груза из любой точки мира вам в Россию!'],
+    whyus: {
+      title: 'Наличие склада в Китае и России',
+      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
+    }
+  },
+  clear: {
+    title: 'Срочная авиадоставка грузов по всему миру и&nbsp;выполнение поручений через личного авиакурьера',
+    plane: 'planeclear.png',
+    ucan: ['отправить надежного человека с посылкой/ поручением из России в любую точку мира','реализовать доставку срочного или важного груза из любой точки мира вам в Россию!'],
+    whyus: {
+      title: 'Наличие склада в Китае и России',
+      text: 'Заказывайте товары в Китае без посредников и храните их бесплатно на наших складах, пока наш курьер их не заберет и доставит Вам. Все склады соответствуют нормам пожарной безопасности и санитарным нормам.'
+    }
+  }
+}
+
+function changeTitles() {
+  var paramsObj = params[settings.mode];
+  $('#js-landing-title').html(paramsObj.title);
+  $('#js-landing-ucan-1').html(paramsObj.ucan[0]);
+  $('#js-landing-ucan-2').html(paramsObj.ucan[1]);
+  $('#js-landing-whyus-title').html(paramsObj.whyus.title);
+  $('#js-landing-whyus-text').html(paramsObj.whyus.text);
+
+  settings.plane = paramsObj.plane;
+}
+
 
 $(document).ready(function() {
+
+  var params = getUrlParams();
+  
+
+  settings.mode = params.mode ? params.mode : 'clear';
+
+  changeTitles();
 
   svg4everybody();
 
@@ -11,11 +100,9 @@ $(document).ready(function() {
       clickable: true,
     },
     breakpoints: {
-      1200: {
-        spaceBetween: 40
-      },
-      1400: {
-        spaceBetween: 40
+      1250: {
+        spaceBetween: 0,
+        slidesPerView: 2,
       },
       720: {
         slidesPerView: 1,
@@ -39,9 +126,9 @@ $(document).ready(function() {
         clickable: true,
       },
       breakpoints: {
-        1200: {
-          spaceBetween: 40,
-          slidesPerView: 2,
+        1250: {
+          spaceBetween: 0,
+          slidesPerView: 3,
         },
         720: {
           slidesPerView: 1,
@@ -67,10 +154,6 @@ $(document).ready(function() {
       },
     });
   });
-
-  $('.whyus__item').on('focusin', function() {
-
-  })
 
 
   $(document).on('click', 'button.send', function(e) {
@@ -115,7 +198,7 @@ $(document).ready(function() {
   container.addChild(bg);
 
   // Background
-  var bg1 = PIXI.Sprite.fromImage("img/planeclear.png");
+  var bg1 = PIXI.Sprite.fromImage('img/' + settings.plane);
   container1.addChild(bg1);
 
 
@@ -145,6 +228,12 @@ $(document).ready(function() {
 
 
 function loadAnimation() {
+
+    setTimeout(function() {
+      $('.right-pad').find('canvas').animate({opacity: 1}, 400)
+    },500)
+
+
     // Blocks to animate
     var simpleFade = $('.js-animate-fade');
     var animateFromTop = $('.js-animate-from-top');

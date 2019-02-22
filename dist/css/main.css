@@ -896,8 +896,7 @@ body, html {
       top: 10%;
       right: auto; }
       .right-pad canvas {
-        width: 100%;
-        opacity: 0.2; } }
+        display: none; } }
   @media screen and (min-width: 721px) and (max-width: 1250px) {
     .right-pad {
       top: 16%;
@@ -954,7 +953,7 @@ body, html {
   @media screen and (max-width: 720px) {
     .semi-title {
       font-size: 18px;
-      padding: 14px 0px 64px 0px; } }
+      padding: 14px 0px 14px 0px; } }
   @media screen and (min-width: 721px) and (max-width: 1250px) {
     .semi-title {
       font-size: 20px; } }
