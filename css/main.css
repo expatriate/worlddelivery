@@ -524,10 +524,16 @@ body, html {
     @media screen and (max-width: 720px) {
       .whenneeds__item {
         width: auto; } }
+    @media screen and (min-width: 721px) and (max-width: 900px) {
+      .whenneeds__item {
+        background-size: 50%; } }
     .whenneeds__item:nth-child(1) {
       background-color: #082863;
       background-image: url("../img/whenneeds1.png");
       background-position: 80% 80%; }
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        .whenneeds__item:nth-child(1) {
+          background-position: 80% 90%; } }
       .whenneeds__item:nth-child(1) .whenneeds__title, .whenneeds__item:nth-child(1) .whenneeds__text {
         color: #ffffff; }
     .whenneeds__item:nth-child(2) {
@@ -546,6 +552,9 @@ body, html {
       background-color: #d8c7d8;
       background-image: url("../img/whenneeds4.png");
       background-position: 90% 95%; }
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        .whenneeds__item:nth-child(4) {
+          background-size: 40%; } }
       .whenneeds__item:nth-child(4) .whenneeds__title, .whenneeds__item:nth-child(4) .whenneeds__text {
         color: #02225c; }
     .whenneeds__item:nth-child(5) {
@@ -563,16 +572,25 @@ body, html {
     .whenneeds__item:nth-child(7) {
       background-color: #02225c;
       background-image: url("../img/whenneeds7.png"); }
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        .whenneeds__item:nth-child(7) {
+          background-size: 70%; } }
       .whenneeds__item:nth-child(7) .whenneeds__title, .whenneeds__item:nth-child(7) .whenneeds__text {
         color: #ffffff; }
     .whenneeds__item:nth-child(8) {
       background-color: #84b8df;
       background-image: url("../img/whenneeds8.png"); }
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        .whenneeds__item:nth-child(8) {
+          background-size: 70%; } }
       .whenneeds__item:nth-child(8) .whenneeds__title, .whenneeds__item:nth-child(8) .whenneeds__text {
         color: #ffffff; }
     .whenneeds__item:nth-child(9) {
       background-color: #ffffff;
       background-image: url("../img/whenneeds9.png"); }
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        .whenneeds__item:nth-child(9) {
+          background-size: 75%; } }
       .whenneeds__item:nth-child(9) .whenneeds__title, .whenneeds__item:nth-child(9) .whenneeds__text {
         color: #02225c; }
     .whenneeds__item:nth-child(10) {
@@ -675,6 +693,15 @@ body, html {
           flex-direction: row;
   margin: 64px 0px; }
   @media screen and (max-width: 720px) {
+    .whyus {
+      width: auto;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: 48px 24px; } }
+  @media screen and (min-width: 721px) and (max-width: 1024px) {
     .whyus {
       width: auto;
       -webkit-box-orient: vertical;
@@ -897,13 +924,23 @@ body, html {
       right: auto; }
       .right-pad canvas {
         display: none; } }
-  @media screen and (min-width: 721px) and (max-width: 1250px) {
+  @media screen and (min-width: 1001px) and (max-width: 1250px) {
     .right-pad {
       top: 0;
       right: -5%; }
       .right-pad canvas {
         width: 80%;
         background-color: #ffffff; } }
+  @media screen and (min-width: 831px) and (max-width: 1000px) {
+    .right-pad {
+      top: 5%;
+      right: -16%; }
+      .right-pad canvas {
+        width: 70%;
+        background-color: #ffffff; } }
+  @media screen and (min-width: 721px) and (max-width: 830px) {
+    .right-pad {
+      display: none; } }
 
 .navigation {
   display: -webkit-box;
@@ -995,7 +1032,11 @@ body, html {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
         -ms-flex: 1;
-            flex: 1; }
+            flex: 1;
+    width: 33%; }
+    @media screen and (max-width: 720px) {
+      .mid-form input, .mid-form .buffer {
+        width: 100%; } }
   .mid-form .buffer {
     padding: 8px 24px 10px 24px; }
     @media screen and (max-width: 720px) {
@@ -1052,6 +1093,9 @@ body, html {
             -ms-flex-direction: column;
                 flex-direction: column;
         width: 100%; } }
+    @media screen and (min-width: 721px) and (max-width: 830px) {
+      .top-form-container {
+        width: 80%; } }
   .top-form__left {
     margin: 16px 16px 16px 0px; }
     @media screen and (max-width: 720px) {
@@ -1113,6 +1157,9 @@ body, html {
       font-size: 24px;
       max-width: 100%;
       padding: 0px 24px; } }
+  @media screen and (min-width: 721px) and (max-width: 900px) {
+    .title {
+      max-width: 100%; } }
   .title__blue {
     color: #02225c; }
   .title__white {
@@ -1645,6 +1692,9 @@ body, html {
         text-align: center;
         margin-top: 14px;
         font-size: 16px; } }
+    @media screen and (min-width: 721px) and (max-width: 1024px) {
+      .ucan__text {
+        font-size: 18px; } }
   .ucan__item {
     width: 50%;
     display: -webkit-box;
@@ -1674,6 +1724,9 @@ body, html {
       @media screen and (max-width: 720px) {
         .ucan__item:first-child {
           margin-right: 0px; } }
+      @media screen and (min-width: 721px) and (max-width: 1024px) {
+        .ucan__item:first-child {
+          margin-right: 32px; } }
     .ucan__item svg {
       fill: #ffffff;
       -webkit-transition: all 0.4s ease;
@@ -1743,10 +1796,11 @@ body, html {
         margin-right: 24px; } }
 
 .free-consult-container {
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 24px; }
   @media screen and (max-width: 720px) {
     .free-consult-container {
-      margin: 0px 24px; } }
+      margin: 0px 24px 48px 24px; } }
 
 .half-content {
   display: -webkit-box;
@@ -1966,7 +2020,6 @@ body, html {
           display: none; } }
   .footer__right {
     width: 70%;
-    background-color: #22cc11;
     overflow-y: hidden; }
     .footer__right img {
       position: absolute;
@@ -2112,7 +2165,9 @@ body, html {
       display: flex;
       -webkit-flex-wrap: wrap;
           -ms-flex-wrap: wrap;
-              flex-wrap: wrap; } }
+              flex-wrap: wrap; }
+      .footer-line form button {
+        margin: 12px 0px; } }
 
 .showmore {
   margin-bottom: 16px;

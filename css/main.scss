@@ -100,11 +100,17 @@ body, html {
     @media screen and (max-width: 720px) {
       width: auto;
     }
+    @media screen and (min-width: 721px) and (max-width: 900px) {
+      background-size: 50%;
+    }
 
     &:nth-child(1) {
       background-color: #082863;
       background-image: url('../img/whenneeds1.png');
       background-position: 80% 80%;
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        background-position: 80% 90%;
+      }
 
       .whenneeds__title, .whenneeds__text {
         color: #ffffff;
@@ -133,6 +139,10 @@ body, html {
       background-image: url('../img/whenneeds4.png');
       background-position: 90% 95%;
 
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        background-size: 40%; 
+      }
+
       .whenneeds__title, .whenneeds__text {
         color: #02225c;
       }
@@ -159,6 +169,10 @@ body, html {
       background-color: #02225c;
       background-image: url('../img/whenneeds7.png');
 
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        background-size: 70%; 
+      }
+
       .whenneeds__title, .whenneeds__text {
         color: #ffffff;
       }
@@ -167,6 +181,10 @@ body, html {
       background-color: #84b8df;
       background-image: url('../img/whenneeds8.png');
 
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        background-size: 70%; 
+      }
+
       .whenneeds__title, .whenneeds__text {
         color: #ffffff;
       }
@@ -174,6 +192,10 @@ body, html {
     &:nth-child(9) {
       background-color: #ffffff;
       background-image: url('../img/whenneeds9.png');
+
+      @media screen and (min-width: 721px) and (max-width: 900px) {
+        background-size: 75%;       
+      }
 
       .whenneeds__title, .whenneeds__text {
         color: #02225c;
@@ -295,6 +317,12 @@ body, html {
   margin: 64px 0px;
 
   @media screen and (max-width: 720px) {
+    width: auto;
+    flex-direction: column;
+    margin: 48px 24px;
+  }
+
+  @media screen and (min-width: 721px) and (max-width: 1024px) {
     width: auto;
     flex-direction: column;
     margin: 48px 24px;
@@ -487,13 +515,26 @@ body, html {
     }
   }
 
-  @media screen and (min-width: 721px) and (max-width: 1250px) {
+  @media screen and (min-width: 1001px) and (max-width: 1250px) {
     top: 0;
     right: -5%;
     canvas {
       width: 80%;
       background-color: #ffffff;
     }
+  }
+
+  @media screen and (min-width: 831px) and (max-width: 1000px) {
+    top: 5%;
+    right: -16%;
+    canvas {
+      width: 70%;
+      background-color: #ffffff;
+    }
+  }
+
+  @media screen and (min-width: 721px) and (max-width: 830px) {
+    display: none;
   }
 }
 
@@ -584,6 +625,11 @@ body, html {
 
   input, .buffer {
     flex: 1;
+    width: 33%;
+    @media screen and (max-width: 720px) {
+      width: 100%;
+    }
+
   }
   .buffer {
     padding: 8px 24px 10px 24px;
@@ -635,6 +681,10 @@ body, html {
       margin-bottom: 24px;
       flex-direction: column;
       width: 100%;
+    }
+
+    @media screen and (min-width: 721px) and (max-width: 830px) {
+      width: 80%;
     }
   }
 
@@ -706,6 +756,9 @@ body, html {
     font-size: 24px;
     max-width: 100%;
     padding: 0px 24px; 
+  }
+  @media screen and (min-width: 721px) and (max-width: 900px) {
+    max-width: 100%;
   }
 
   &__blue {
@@ -1176,6 +1229,9 @@ body, html {
       margin-top: 14px;
       font-size: 16px;
     }
+    @media screen and (min-width: 721px) and (max-width: 1024px) {
+      font-size: 18px;
+    }
   }
 
   &__item {
@@ -1194,6 +1250,9 @@ body, html {
       margin-right: 64px;
       @media screen and (max-width: 720px) {
         margin-right: 0px;
+      }
+      @media screen and (min-width: 721px) and (max-width: 1024px) {
+        margin-right: 32px;
       }
     }
 
@@ -1254,9 +1313,10 @@ body, html {
 
 .free-consult-container {
   text-align: center;
+   margin-bottom: 24px;
 
   @media screen and (max-width: 720px) {
-    margin: 0px 24px;
+    margin: 0px 24px 48px 24px;
   }
 }
 
@@ -1446,7 +1506,6 @@ body, html {
   }
   &__right {
     width: 70%;
-    background-color: #22cc11;
     overflow-y:hidden; 
 
     img {
@@ -1582,6 +1641,9 @@ body, html {
       display: flex;
       flex-wrap: wrap;
 
+      button {
+        margin: 12px 0px
+      }
     }
   }
 }
