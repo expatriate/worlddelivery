@@ -41,6 +41,24 @@ function changeTitles() {
   settings.plane = paramsObj.plane;
 }
 
+$(document).on('scroll', function() {
+  if (window.innerHeight < window.pageYOffset) {
+    if (!$('#scrolltotop').hasClass('visible')) {
+      $('#scrolltotop').addClass('visible').animate({opacity: 1}, 500);
+    }
+  } else {
+    if ($('#scrolltotop').hasClass('visible')) {
+      $('#scrolltotop').removeClass('visible').animate({opacity: 0}, 500);
+    }
+  }
+});
+
+$('#scrolltotop').on('click', function() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+})
 
 $(document).ready(function() {
 
@@ -98,14 +116,13 @@ $(document).ready(function() {
     });
   }
 
-  $(document).on('click', 'button.modal', function(e) {
+  $(document).on('click', 'button.modal, span.modal', function(e) {
     e.preventDefault();
 
     var target = e.target;
 
-    if (!$(target).hasClass('.modal')) {
+    if (!$(target).hasClass('modal')) {
       target = $(target).parents('.modal')[0];
-      console.log(target)
     }
 
     $.magnificPopup.open({

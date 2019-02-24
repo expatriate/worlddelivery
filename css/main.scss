@@ -1923,6 +1923,28 @@ input {
   }
 }
 
+.scrolltotop {
+  position: fixed;
+  bottom: 64px;
+  right: 64px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+
+  span {
+    margin-top: 12px;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: MuseoSansThin;
+  }
+
+  @media screen and (max-width: 1024px) {
+      display: none;
+  }
+}
+
 /* 
 #header {
   position: absolute;
